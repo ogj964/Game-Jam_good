@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 
 const SPEED = 200.0
-const JUMP_VELOCITY = -100000.0
+const JUMP_VELOCITY = -300.0
 
 
 func _physics_process(delta: float) -> void:
@@ -13,6 +13,7 @@ func _physics_process(delta: float) -> void:
 	# Handle jump.
 	if Input.is_action_just_pressed("jump") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
+		print("jump")
 
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should rep   lace UI actions with custom gameplay actions.

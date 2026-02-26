@@ -13,7 +13,7 @@ size = Vector2(26, 23)
 radius = 63.03174
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_fip42"]
-radius = 54.0
+radius = 54.00926
 
 [node name="Enemy_lvl_1" type="CharacterBody2D"]
 script = ExtResource("1_rap24")
