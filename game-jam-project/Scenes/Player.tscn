@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://bef2s6ct3plih" path="res://icon.svg" id="1_rpqav"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kyqiw"]
-size = Vector2(56, 50)
+size = Vector2(25, 20)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_kyqiw"]
 animations = [{
@@ -21,10 +21,10 @@ animations = [{
 script = ExtResource("1_kyqiw")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-2, -30)
+position = Vector2(0.5, -11)
 shape = SubResource("RectangleShape2D_kyqiw")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(-2, -29)
-scale = Vector2(0.484375, 0.4375)
+position = Vector2(0, -11)
+scale = Vector2(0.20312501, 0.16406249)
 sprite_frames = SubResource("SpriteFrames_kyqiw")
