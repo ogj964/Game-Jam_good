@@ -23,10 +23,10 @@ up_direction = Vector2(0, 1)
 script = ExtResource("1_kyqiw")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(0.030881882, -11.358773)
+position = Vector2(0.07639408, -11.347396)
 scale = Vector2(0.27083334, 0.27083334)
 sprite_frames = SubResource("SpriteFrames_dewec")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-0.004193306, -10.007238)
+position = Vector2(0.029940605, -10.029994)
 shape = SubResource("CapsuleShape2D_kyqiw")
