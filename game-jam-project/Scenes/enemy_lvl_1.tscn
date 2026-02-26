@@ -1,0 +1,47 @@
+[gd_scene load_steps=7 format=3 uid="uid://cm6gigv8583hr"]
+
+[ext_resource type="Texture2D" uid="uid://bef2s6ct3plih" path="res://icon.svg" id="1_moppb"]
+[ext_resource type="Script" uid="uid://d2mq6c5cf1sil" path="res://Scenes/enemy_lvl_1.gd" id="1_rap24"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_moppb"]
+size = Vector2(25, 23.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rap24"]
+size = Vector2(26, 23)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_3m0k7"]
+radius = 63.03174
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_fip42"]
+radius = 54.0
+
+[node name="Enemy_lvl_1" type="CharacterBody2D"]
+script = ExtResource("1_rap24")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(0.8715579, 0, 0.11137194, 1)
+position = Vector2(0, -13)
+scale = Vector2(0.20117284, 0.17773637)
+texture = ExtResource("1_moppb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, -12.25)
+shape = SubResource("RectangleShape2D_moppb")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, -12.5)
+shape = SubResource("RectangleShape2D_rap24")
+
+[node name="enter_area" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enter_area"]
+position = Vector2(0, -12)
+shape = SubResource("CircleShape2D_3m0k7")
+
+[node name="exit_area" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="exit_area"]
+position = Vector2(0, -12)
+shape = SubResource("CircleShape2D_fip42")
