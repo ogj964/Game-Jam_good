@@ -1,16 +1,20 @@
-[gd_scene load_steps=5 format=3 uid="uid://vymm1s5a0v6e"]
+[gd_scene load_steps=6 format=3 uid="uid://vymm1s5a0v6e"]
 
 [ext_resource type="Script" uid="uid://cs3j7lvg48kh8" path="res://Scripts/player.gd" id="1_kyqiw"]
-[ext_resource type="Texture2D" uid="uid://bef2s6ct3plih" path="res://icon.svg" id="1_rpqav"]
+[ext_resource type="Texture2D" uid="uid://bbpu606ughbhk" path="res://Assets/download (1).png" id="2_kyqiw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kyqiw"]
-size = Vector2(25, 20)
+size = Vector2(5, 22)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_kyqiw"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_gntrk"]
+atlas = ExtResource("2_kyqiw")
+region = Rect2(0, 0, 96, 96)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dewec"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_rpqav")
+"texture": SubResource("AtlasTexture_gntrk")
 }],
 "loop": true,
 "name": &"default",
@@ -18,13 +22,14 @@ animations = [{
 }]
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
+up_direction = Vector2(0, 1)
 script = ExtResource("1_kyqiw")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0.5, -11)
+position = Vector2(-1.5, -11)
 shape = SubResource("RectangleShape2D_kyqiw")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -11)
-scale = Vector2(0.20312501, 0.16406249)
-sprite_frames = SubResource("SpriteFrames_kyqiw")
+scale = Vector2(0.27083334, 0.27083334)
+sprite_frames = SubResource("SpriteFrames_dewec")

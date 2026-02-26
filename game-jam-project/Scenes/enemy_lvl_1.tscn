@@ -1,7 +1,7 @@
-[gd_scene format=3 uid="uid://cm6gigv8583hr"]
+[gd_scene load_steps=7 format=3 uid="uid://cm6gigv8583hr"]
 
 [ext_resource type="Texture2D" uid="uid://bef2s6ct3plih" path="res://icon.svg" id="1_moppb"]
-[ext_resource type="Script" uid="uid://d2mq6c5cf1sil" path="res://Scenes/enemy_lvl_1.gd" id="1_rap24"]
+[ext_resource type="Script" uid="uid://d2mq6c5cf1sil" path="res://enemy_lvl_1.gd" id="1_rap24"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_moppb"]
 size = Vector2(25, 23.5)
